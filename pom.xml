@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>me.cxz</groupId>
-    <artifactId>samples</artifactId>
+    <artifactId>mp_samples</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>samples</name>
+    <name>mp_samples</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
