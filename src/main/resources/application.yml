@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    #url: jdbc:mysql://localhost:3306/samples?useSSL=false&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    url: jdbc:p6spy:mysql://localhost:3306/samples?useSSL=false&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+logging:
+  level:
+    root: warn
+    me.cxz.samples.dao: trace
+  pattern:
+    console: '%p%m%n'
+
+mybatis-plus:
+  mapper-locations:
+    - me/cxz/samples/mapper/*
+  global-config:
+    db-config:
+      id-type: id_worker
+      # update-strategy: not_empty
+      # table-prefix: tb_
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+  # config-location: classpath:mybatis-config.xml
+  type-aliases-package: me.cxz.samples.entity
+  configuration:
+    map-underscore-to-camel-case: true
