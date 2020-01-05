@@ -15,8 +15,8 @@ logging:
     console: '%p%m%n'
 
 mybatis-plus:
-  mapper-locations:
-    - me/cxz/samples/mapper/*
+  mapper-locations: classpath:mapper/*.xml
+    #- me/cxz/samples/mapper/*
   global-config:
     db-config:
       id-type: id_worker
